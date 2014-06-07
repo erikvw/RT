@@ -21,39 +21,25 @@ $rt_uri = 'http://www.mediawiki.org/wiki/Extension:RT';
 
 # Default values: Override in LocalSettings.php, not here!
 $wgRequestTracker_URL         = 'http://rt.example.com/Ticket/Display.html?id';
-####$wgRequestTracker_DBconn      = 'user=rt dbname=rt';
 $wgRequestTracker_Formats     = array();
 $wgRequestTracker_Cachepage   = 0;
 $wgRequestTracker_Useballoons = 1;
 $wgRequestTracker_Active      = 1;
 $wgRequestTracker_Sortable    = 1;
 
-// added erikvw - begin
-$wgRequestTracker_DBuser     = 'root';
-$wgRequestTracker_DBpasswd     = 'cc3721b';
+$wgRequestTracker_DBuser     = 'rtuser';
+$wgRequestTracker_DBpasswd     = 'wibble';
 $wgRequestTracker_DBdbname      = 'rtdb';
-$wgRequestTracker_DBhost      = 'rt.bhp.org.bw';
-####$wgRequestTracker_DBconn      = array('rt.example.com','rtuser', 'wibble');
-// added erikvw - end
+$wgRequestTracker_DBhost      = 'rt.example.com';
 
 # Time formatting
 # Example formats:
 # FMHH:MI AM FMMon DD, YYYY => 2:42 PM Jan 23, 2009
 # HH:MI FMMonth DD, YYYY => 14:42 January 23, 2009
 # YYYY/MM/DD => 2009/01/23
-# For a more complete list of possibilities, please visit:
-# http://www.postgresql.org/docs/current/interactive/functions-formatting.html
-####$wgRequestTracker_TIMEFORMAT_LASTUPDATED  = 'FMHH:MI AM FMMonth DD, YYYY';
-####$wgRequestTracker_TIMEFORMAT_LASTUPDATED2 = 'FMMonth DD, YYYY';
-####$wgRequestTracker_TIMEFORMAT_CREATED      = 'FMHH:MI AM FMMonth DD, YYYY';
-####$wgRequestTracker_TIMEFORMAT_CREATED2     = 'FMMonth DD, YYYY';
-####$wgRequestTracker_TIMEFORMAT_RESOLVED     = 'FMHH:MI AM FMMonth DD, YYYY';
-####$wgRequestTracker_TIMEFORMAT_RESOLVED2    = 'FMMonth DD, YYYY';
-####$wgRequestTracker_TIMEFORMAT_NOW          = 'FMHH:MI AM FMMonth DD, YYYY';
 
-// added erikvw - begin
 ## For a more complete list of possibilities, please visit:
-##http://dev.mysql.com/doc/refman/5.1/en/date-and-time-functions.html#function_date-format
+## http://dev.mysql.com/doc/refman/5.1/en/date-and-time-functions.html#function_date-format
 $wgRequestTracker_TIMEFORMAT_LASTUPDATED  = '%h:%i %p %b %D, %Y';
 $wgRequestTracker_TIMEFORMAT_LASTUPDATED2 = '%D %b %Y';
 $wgRequestTracker_TIMEFORMAT_CREATED      = '%h:%i %p %b %D, %Y';
@@ -61,7 +47,6 @@ $wgRequestTracker_TIMEFORMAT_CREATED2     = '%D %b %Y';
 $wgRequestTracker_TIMEFORMAT_RESOLVED     = '%h:%i %p %b %D, %Y';
 $wgRequestTracker_TIMEFORMAT_RESOLVED2    = '%D %b %Y';
 $wgRequestTracker_TIMEFORMAT_NOW          = '%h:%i %p %b %D, %Y';
-// added erikvw - end
 
 // Ensure nothing is done unless run via MediaWiki
 if ( !defined( 'MEDIAWIKI' ) ) {
@@ -74,8 +59,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['parserhook'][] = array(
 	'path'           => __FILE__,
 	'name'           => 'RT',
-	'version'        => '1.12.0',
-	'author'         => array( 'Greg Sabino Mullane' ),
+	'version'        => '1.12.0-mysql',
+	'author'         => array( 'Greg Sabino Mullane', 'erikvw' ),
 	'descriptionmsg' => 'rt-desc',
 	'url'            => $rt_uri,
 );

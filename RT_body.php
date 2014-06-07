@@ -6,7 +6,6 @@ class RT {
 	 * Register the hook with ParserFirstCallInit
 	 */
 	public static function registerHook( &$parser ) {
-		// ####$parser->setHook( 'rt', array( 'RT::render' ) );
                 $parser->setHook( 'rt', array( 'RT', 'render' ) );
 		return true;
 	}
@@ -16,13 +15,10 @@ class RT {
 
 		global $wgRequestTracker_Cachepage,
 			$wgRequestTracker_Active,
-			// ####$wgRequestTracker_DBconn,
-			// added erikvw - begin
 			$wgRequestTracker_DBuser,
 			$wgRequestTracker_DBpasswd,
 			$wgRequestTracker_DBdbname,
 			$wgRequestTracker_DBhost,
-			// added erikvw - end
 			$wgRequestTracker_Sortable,
 			$wgRequestTracker_TIMEFORMAT_LASTUPDATED,
 			$wgRequestTracker_TIMEFORMAT_LASTUPDATED2,
@@ -49,12 +45,10 @@ class RT {
 		// Try and connect to the database if we are active
 		if ( $wgRequestTracker_Active ) {
 			global $wgUser;
-			// #### $dbh = pg_connect( $wgRequestTracker_DBconn );
     			$dbh = mysql_connect( $wgRequestTracker_DBhost, $wgRequestTracker_DBuser,$wgRequestTracker_DBpasswd  );
 			$db_selected = mysql_select_db($wgRequestTracker_DBdbname, $dbh);
 			if ( $dbh == false ) {
 				wfDebug( "DB connection error\n" );
-				// #### wfDebug( "Connection string: $wgRequestTracker_DBconn\n" );
 				wfDebug( "Connection string: $wgRequestTracker_DBhost, $wgRequestTracker_DBuser,$wgRequestTracker_DBpasswd" );
 				$wgRequestTracker_Active = 0;
 			}
@@ -63,7 +57,6 @@ class RT {
 				$found = array();
 				if ( preg_match ( '/((-?\d\d?):(\d\d))/', $tz, $found ) ) {
 					if ( $found[3] === '00' ) {
-						// pg_query( "SET TIME ZONE $found[2]" );
 						mysql_query( "SET TIME ZONE $found[2]" );
 					}
 					else {
@@ -123,18 +116,11 @@ class RT {
                  . " datediff(now(),t.created) AS age";
         	// added erikvw - end
 
-        	// #### removed erikvw
-		//$ticketquery = "SELECT $ticketinfo\nFROM tickets t, queues q, users u, users u2";
-		//$whereclause = "WHERE t.queue = q.id\nAND t.owner = u.id\nAND t.creator = u2.id";
-		// end removed erikvw
-
-		// #### added erikvw - begin
 		// mysql is case sensistive to the table names (rt3.6)
        		 $ticketquery = "SELECT $ticketinfo FROM Tickets t"
                 	. ' JOIN Users u ON t.owner = u.id'
                 	. ' JOIN Users u2 ON t.creator = u2.id'
                 	. ' JOIN Queues q ON t.queue = q.id';
-		// added erikvw - end
 
 		// If just a single number, treat it as <rt>#</rt>
 		if ( 1 === count( $args ) ) {
@@ -146,12 +132,10 @@ class RT {
 		// Look up a single ticket number
 		if ( $ticketnum ) {
 			$SQL = "$ticketquery $whereclause\nAND t.id = $ticketnum";
-			// #### $res = pg_query( $dbh, $SQL );
 			$res = mysql_query( $SQL );
 			if ( !$res ) {
 				die ( wfMsg( 'rt-badquery' ) );
 			}
-			// #### $info = pg_fetch_array( $res );
 			$info = mysql_fetch_array( $res );
 			if ( !$info ) {
 				return "<span class='rt-nosuchticket'>RT #$ticketnum</span>";
@@ -284,19 +268,14 @@ class RT {
 
 		// Build and run the final query
 		$SQL = "$ticketquery $whereclause $orderby $limit";
-		// #### $res = pg_query( $dbh, $SQL );
 		$res = mysql_query( $SQL );
 		if ( !$res ) {
 			die ( wfMsg( 'rt-badquery' ) );
 		}
-		// #### $info = pg_fetch_all( $res );
-		// erikvw add mysql fetch - begin
 		while ($row = mysql_fetch_array($res,  MYSQL_ASSOC)) {
 	 	  $info[] = $row;
           	  $i++;
 		}
-		// erikvw add mysql fetch - end
-		// ####
 
 		if ( !$info ) {
 			$msg = wfMsg( 'rt-nomatches' );
