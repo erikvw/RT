@@ -21,16 +21,15 @@ $rt_uri = 'http://www.mediawiki.org/wiki/Extension:RT';
 
 # Default values: Override in LocalSettings.php, not here!
 $wgRequestTracker_URL         = 'http://rt.example.com/Ticket/Display.html?id';
+$wgRequestTracker_DBuser     = 'rtuser';
+$wgRequestTracker_DBpasswd     = 'wibble';
+$wgRequestTracker_DBhost      = 'rt.example.com';
+$wgRequestTracker_DBdbname      = 'rtdb';
 $wgRequestTracker_Formats     = array();
 $wgRequestTracker_Cachepage   = 0;
 $wgRequestTracker_Useballoons = 1;
 $wgRequestTracker_Active      = 1;
 $wgRequestTracker_Sortable    = 1;
-
-$wgRequestTracker_DBuser     = 'rtuser';
-$wgRequestTracker_DBpasswd     = 'wibble';
-$wgRequestTracker_DBdbname      = 'rtdb';
-$wgRequestTracker_DBhost      = 'rt.example.com';
 
 # Time formatting
 # Example formats:
