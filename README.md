@@ -22,6 +22,11 @@ This is a modified version of the Mediawiki Extension:RT written by Greg Sabino 
    
    Note: I do not use $wgRequestTracker_DBconn.
 
+3. Mediawiki Extension:Balloons has been removed from the Mediawiki repository for security reasons so add this line to your LocalSettings.php.
+       ```php 
+       $wgRequestTracker_Useballoons = 0;
+       ```
+
 3. Reload apache
 
 4. Refer to the Usage section at http://www.mediawiki.org/wiki/Extension:RT
