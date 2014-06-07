@@ -10,12 +10,14 @@ This is a modified version of the Mediawiki Extension:RT written by Greg Sabino 
 
 2. Add the following lines to the bottom of  your Localsettings.php:
 
-  require_once "$IP/extensions/RT/RT.php";
-  $wgRequestTracker_URL      = 'http://rt.example.com/Ticket/Display.html?id';
-  $wgRequestTracker_DBuser   = 'rtuser';
-  $wgRequestTracker_DBpasswd = 'wibble';
-  $wgRequestTracker_DBhost   = 'rt.example.com';
-  $wgRequestTracker_DBdbname = 'rtdb';
+       ```php
+       require_once "$IP/extensions/RT/RT.php";
+       $wgRequestTracker_URL      = 'http://rt.example.com/Ticket/Display.html?id';
+       $wgRequestTracker_DBuser   = 'rtuser';
+       $wgRequestTracker_DBpasswd = 'wibble';
+       $wgRequestTracker_DBhost   = 'rt.example.com';
+       $wgRequestTracker_DBdbname = 'rtdb';
+       ```
 
 3. Reload apache
 
