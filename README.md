@@ -1,7 +1,7 @@
 RT
 ==
 
-Mediawiki Extension:RT for mysql
+Mediawiki Extension:RT for Request Tracker using mysql
 
 Tested with RT 3.8 and Mediawiki 1.23.
 
