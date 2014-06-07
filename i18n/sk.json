@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Helix84"
+		]
+	},
+	"rt-desc": "Pekné rozhranie k sledovaniu požiadaviek (RT - Request Tracker)",
+	"rt-inactive": "Rozšírenie RT nie je aktívne",
+	"rt-badquery": "V rozšírení RT nastala chyba pri komunikácii s databázou RT",
+	"rt-badlimit": "Neplatný argument LIMIT (l): musí byť číslo.\nSkúšali ste: '''$1'''",
+	"rt-badorderby": "Neplatný argument ORDER BY (ob): musí byť štandardné pole (pozri dokumentáciu).\nSkúšali ste: '''$1'''",
+	"rt-badstatus": "Neplatný argument status (s): musí byť štandardné pole (pozri dokumentáciu).\nSkúšali ste: '''$1'''",
+	"rt-badqueue": "Neplatný argument queue (q): musí byť jednoduché slovo.\nSkúšali ste: '''$1'''",
+	"rt-badowner": "Neplatný argument owner (o): musí byť platné používateľské meno.\nSkúšali ste: '''$1'''",
+	"rt-nomatches": "Neboli nájdené zodpovedajúce požiadavky v RT"
+}

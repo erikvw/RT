@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardo.mps",
+			"Giro720",
+			"Luckas"
+		]
+	},
+	"rt-desc": "Interface para o RT (Request Tracker)",
+	"rt-inactive": "A extensão RT não está ativa",
+	"rt-badquery": "A extensão RT encontrou um erro enquanto se comunicava com a base de dados do RT",
+	"rt-badlimit": "Parâmetro LIMIT (l) inválido: é necessário que seja um número.\nVocê tentou: '''$1'''",
+	"rt-badorderby": "Parâmetro ORDER BY (ob) inválido: é necessário que seja um campo padrão (veja a documentação).\nVocê tentou: '''$1'''",
+	"rt-badstatus": "Parâmetro status (s) inválido: é necessário que seja um campo padrão (veja a documentação).\nVocê tentou: '''$1'''",
+	"rt-badcfield": "Argumento inválido para o campo personalizado: tem de ser uma palavra simples (consulte a documentação).\nTentou: '''$1'''",
+	"rt-badqueue": "Parâmetro queue (q) inválido: é preciso que seja uma palavra simples.\nVocê tentou: '''$1'''",
+	"rt-badowner": "Parâmetro owner (o) inválido: é necessário que seja um nome de usuário válido.\nVocê tentou: '''$1'''",
+	"rt-nomatches": "Nenhum ticket RT correspondente foi encontrado"
+}

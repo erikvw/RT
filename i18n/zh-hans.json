@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Yfdyh000",
+			"Hudafu",
+			"Liuxinyu970226"
+		]
+	},
+	"rt-desc": "RT（请求跟踪器）的花哨接口",
+	"rt-inactive": "RT扩展程序未激活。",
+	"rt-badquery": "RT扩展程序在同RT数据库通信时出错。",
+	"rt-badlimit": "无效的LIMIT (l)理由：必须是数字。您曾尝试：'''$1'''",
+	"rt-badorderby": "无效的ORDER BY (ob)参数：必须是标准字段（参见文档）。您曾尝试：'''$1'''",
+	"rt-badstatus": "无效的status (s)参数：必须是标准字段（参见文档）。您曾尝试：'''$1'''",
+	"rt-badcfield": "无效的自定义字段参数：必须是简单词（参见文档）。您曾尝试：'''$1'''",
+	"rt-badqueue": "无效的queue (q)参数：必须是简单词。您曾尝试：'''$1'''",
+	"rt-badowner": "无效的owner (o)参数：必须是有效用户名。您曾尝试：'''$1'''",
+	"rt-nomatches": "没有找到RT令牌。"
+}

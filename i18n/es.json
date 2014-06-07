@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Antur",
+			"Crazymadlover",
+			"Pertile",
+			"Translationista"
+		]
+	},
+	"rt-desc": "Interfaz bonita para el RT (Request Tracker)",
+	"rt-inactive": "La extensión RT no está activa",
+	"rt-badquery": "La extensión RT encontró un error cuando se comunicaba con la base de datos RT",
+	"rt-badlimit": "LIMITE inválido (l) arg: debe ser un número.\nIntentaste: '''$1'''",
+	"rt-badorderby": "ORDEN inválido por (ob) arg: debe ser un campo estándar (ver documentación).\nIntentaste: '''$1'''",
+	"rt-badstatus": "status inválido (s) arg: debe ser un campo estándar (ver documentación).\nIntentaste: '''$1'''",
+	"rt-badcfield": "Argumento de campo personalizado inválido: debe ser una palabra simple (consulte la documentación).\nHa intentado: '''$1'''.",
+	"rt-badqueue": "cola inválida (q) arg: debe ser una palabra simple.\nIntentaste: '''$1'''",
+	"rt-badowner": "propietario inválido (o) arg: debe ser un nombre de usuario.\nIntentaste: '''$1'''",
+	"rt-nomatches": "No se encontraron tickets RT coincidentes."
+}

@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"rt-desc": "Interfàcia per RT (Request Tracker)",
+	"rt-inactive": "L’extension RT es pas activa",
+	"rt-badquery": "L'extension RT a rencontrat una error al moment d'una requèsta sus la banca de donadas de RT",
+	"rt-badlimit": "Argument LIMIT (l) invalid : deu èsser un nombre.\nAvètz ensajat : '''$1'''",
+	"rt-badorderby": "Argument ORDER BY (ob) invalid : deu èsser un camp estandard (vejatz la documentacion).\nAvètz ensajat : '''$1'''",
+	"rt-badstatus": "Argument status (s) invalid : deu èsser un camp estandard (vejatz la documentacion).\nAvètz ensajat : '''$1'''",
+	"rt-badcfield": "Argument de camp personalizat invalid : deu èsser un mot simple (veire documentacion).\nAvètz ensajat : '''$1'''",
+	"rt-badqueue": "Argument queue (q) invalid : deu èsser un mot simple.\nAvètz ensajat : '''$1'''",
+	"rt-badowner": "Argument owner (o) invalid : deu èsser un nom d'utilizaire valid.\nAvètz ensajat : '''$1'''",
+	"rt-nomatches": "Cap de ticket RT es pas estat trobat"
+}

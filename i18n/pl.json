@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sp5uhe"
+		]
+	},
+	"rt-desc": "Specjalny interfejs systemu obsługi zgłoszeń",
+	"rt-inactive": "Rozszerzenie „system obsługi zgłoszeń” nie jest aktywne",
+	"rt-badquery": "Wystąpił błąd podczas komunikacji z bazą danych rozszerzenia „systemu obsługi zgłoszeń”",
+	"rt-badlimit": "Nieprawidłowe LIMIT (l) – argument musi być liczbą.\nPróbowałeś '''$1'''",
+	"rt-badorderby": "Nieprawidłowe ORDER BY (ob) – argument musi być standardowym polem (sprawdź w dokumentacji).\nPróbowałeś '''$1'''",
+	"rt-badstatus": "Nieprawidłowe status (s) – argument musi być standardowym polem (sprawdź w dokumentacji).\nPróbowałeś '''$1'''",
+	"rt-badcfield": "Nieprawidłowy argument w niestandardowym polu – musi to być proste słowo (sprawdź w dokumentacji).\nPróbowałeś – '''$1'''",
+	"rt-badqueue": "Nieprawidłowe queue (s) – argument musi być prostym słowem.\nPróbowałeś '''$1'''",
+	"rt-badowner": "Nieprawidłowe owner (o) – argument musi być poprawną nazwą użytkownika.\nPróbowałeś '''$1'''",
+	"rt-nomatches": "Brak pasujących zgłoszeń w „systemie obsługi zgłoszeń”"
+}
