@@ -8,7 +8,7 @@ This is a modified version of the Mediawiki Extension:RT written by Greg Sabino 
 
 1. Clone this repository into your mediawiki extensions folder, e.g. /usr/share/mediawiki/extensions
 
-2. Add the following lines to the bottom of  your Localsettings.php:
+2. Add the following lines to the bottom of  your LocalSettings.php:
 
        ```php
        require_once "$IP/extensions/RT/RT.php";
@@ -18,6 +18,9 @@ This is a modified version of the Mediawiki Extension:RT written by Greg Sabino 
        $wgRequestTracker_DBhost   = 'rt.example.com';
        $wgRequestTracker_DBdbname = 'rtdb';
        ```
+   Replace the RT URL, user, password, host and database name with yours. See http://www.mediawiki.org/wiki/Extension:RT    for other parameters. 
+   
+   Note: I do not use $wgRequestTracker_DBconn.
 
 3. Reload apache
 
